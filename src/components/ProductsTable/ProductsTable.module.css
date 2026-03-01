@@ -1,0 +1,27 @@
+.cheackBox {
+  width: 22px;
+  height: 22px;
+}
+.tableWrapper {
+  padding: 30px;
+  padding-bottom: 50px;
+  background-color: var(--white-color);
+  border-radius: 12px;
+}
+.tableHeader {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  align-items: center;
+}
+.addProduct {
+  height: 42px;
+  background-color: var(--blue-color);
+  color: var(--white-color);
+  border: none !important;
+  margin-left: 8px;
+}
+.relaod {
+  height: 42px;
+  min-width: 42px;
+}

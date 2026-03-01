@@ -1,0 +1,61 @@
+.login-page {
+  background: var(--background-primary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.login-page__container-border {
+  background-color: var(--white-color);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-primary-color);
+}
+
+.login-page__container-border-inside1 {
+  padding: 3px;
+  border-radius: 39px;
+  background-color: var(--white-color);
+}
+.login-page__container-border-inside2 {
+  border-radius: 38px;
+  background: linear-gradient(180deg, var(--border-primary-color), var(--white-color));
+  padding: 1px;
+}
+
+.login-page__container {
+  padding: 48px;
+  padding-bottom: 30px;
+  /* border: px solid white; */
+  border-radius: 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: linear-gradient(180deg, var(--background-primary-color), var(--white-color));
+}
+
+.login-page__logo {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  padding: 6px;
+  background: linear-gradient(180deg, var(--background-primary-color), var(--white-color));
+}
+
+.login-page__logo-border-inside1 {
+  padding: 1px;
+  border-radius: 50px;
+  background-color: red;
+  background: linear-gradient(180deg, var(--border-primary-color), var(--white-color));
+}
+
+.login-page__logo-border {
+  padding: 3px;
+  align-self: center;
+  border-radius: 100px;
+  width: 52px;
+  height: 52px;
+  background-color: var(--white-color);
+  box-shadow: 0 12px 8px rgba(0, 0, 0, 0.03);
+  margin-bottom: 32px;
+}

@@ -1,0 +1,5 @@
+.productPageWrapper {
+    min-height: 100vh;
+    padding-top: 24px;
+    background-color: var(--background-primary-color);
+}

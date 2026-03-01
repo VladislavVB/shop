@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+#root {
+  width: 100%;
+}
+:root {
+  --border-radius: 40px;
+  --background-primary-color: #f9f9f9;
+  --border-primary-color: #ededed;
+  --white-color: #fff;
+  --button-primary-color: #242edb;
+  --button-primary-border-color: #367aff;
+  --text-color: #6c6c6c;
+  --text-dark-color: #232323;
+  --text-light-color: #9c9c9c;
+  --icon-color: #999999;
+  --deep-blue-color: #3c538e;
+  --gray3-color: #e2e2e2;
+  --gray2-color: #c4c4c4;
+  --blue-color: #242edb;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.h1 {
+  font-weight: 600;
+  line-height: 110%;
+  font-size: 40px;
+  letter-spacing: -1.5%;
+  margin: 0;
+  margin-bottom: 12px;
+  color: var(--text-dark-color);
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--text-dark-color);
+  margin: 0;
+}
+
+h5 {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text-dark-color);
+  margin: 0;
+}
+
+h6 {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-dark-color);
+  margin: 0;
+}
+
+.text {
+  margin-top: 0;
+  font-size: 18px;
+  line-height: 150%;
+  font-weight: 400;
+  color: var(--text-color);
+}
+
+.text-link {
+  color: var(--button-primary-color);
+  font-weight: 500;
+  border-bottom: 1px solid var(--button-primary-color);
+}
+
+.label {
+  font-size: 18px;
+  letter-spacing: -1.5%;
+  line-height: 150%;
+  color: var(--text-dark-color);
+}
+
+.input-form {
+  min-height: 55px;
+}
+
+.text-gradient {
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  /* font-size: 40px; */
+  /* font-weight: 500; */
+  background-image: linear-gradient(180deg, #bababa, #e2e0e0);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.button-primary {
+  border-radius: 12px;
+  padding: 26px;
+  background-color: var(--button-primary-color);
+  border: 1px solid var(--button-primary-border-color);
+}
+
+.button-primary span {
+  font-size: 18px;
+}
+
+:where(.css-dev-only-do-not-override-1enej14).ant-form-item
+  .ant-form-item-label
+  > label.ant-form-item-required::before {
+  content: none;
+}
+
+.color-textlight {
+  color: var(--text-light-color);
+}
+
+.ant-table-cell {
+  background-color: transparent !important;
+  border: none !important;
+  white-space: 125%;
+  border-bottom: 2px solid var(--gray3-color) !important;
+}
+
+.ant-table-column-title {
+  font-size: 16px;
+  color: #b2b3ba;
+  text-align: center;
+}
+
+:where(.css-dev-only-do-not-override-1enej14).ant-table-wrapper .ant-table-cell-ellipsis .ant-table-column-title {
+  text-align: left;
+}
+.ant-table-container {
+  border: none !important;
+}
