@@ -25,3 +25,25 @@
   height: 42px;
   min-width: 42px;
 }
+.rowSelected {
+  background-color: red;
+}
+
+.rowSelected {
+  position: relative;
+  background-color: transparent !important;
+}
+
+.rowSelected td:first-child {
+  position: relative;
+}
+
+.rowSelected td:first-child::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: var(--deep-blue-color);
+}

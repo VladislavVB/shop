@@ -10,6 +10,7 @@ export const CelRating: React.FC<Props> = ({ rating }) => {
     fontSize: '16px',
     fontWeight: 400,
     textAlign: 'center',
+    letterSpacing: -2.5
   }
 
   return (
