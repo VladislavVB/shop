@@ -1,9 +1,9 @@
+import { type TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux'
 import { configureStore } from '@reduxjs/toolkit'
 import { setupListeners } from '@reduxjs/toolkit/query'
-import { type TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux'
-import authReducer from './slices/authSlice'
-import { authApi } from '../api/authApi/authApi'
-import { productsApi } from '../api/productsApi/productsApi'
+import { authApi } from '@/pages/LoginPage/api/authApi'
+import { productsApi } from '@/pages/ProductsPage/api/productsApi'
+import authReducer from '../../pages/LoginPage/api/authSlice'
 
 export const store = configureStore({
   reducer: {

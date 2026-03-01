@@ -1,6 +1,6 @@
 import { createBrowserRouter, Navigate } from 'react-router-dom'
-import ProtectedRoute from '@/router/routes/ProtectedRoute'
-import UnprotectedRoute from '@/router/routes/UnprotectedRoute'
+import ProtectedRoute from '@/app/router/routes/ProtectedRoute'
+import UnprotectedRoute from '@/app/router/routes/UnprotectedRoute'
 import LoginPage from '@/pages/LoginPage/LoginPage'
 import ProductsPage from '@/pages/ProductsPage/ProductsPage'
 import AddProductPage from '@/pages/AddProductPage/AddProductPage'

@@ -1,5 +1,5 @@
 import { Navigate } from 'react-router-dom'
-import { useAppSelector } from '../../store/index'
+import { useAppSelector } from '@/app/store/index'
 
 interface ProtectedRouteProps {
   children: React.ReactNode

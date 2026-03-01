@@ -2,12 +2,11 @@ import { useEffect, type FC } from 'react'
 import { HiOutlineUser, HiOutlineLockClosed, HiOutlineEye, HiOutlineEyeOff } from 'react-icons/hi'
 import { Button, Checkbox, Form, Input, Divider, notification } from 'antd'
 import { useNavigate } from 'react-router-dom'
-import { useAppDispatch, useAppSelector } from '../../store/index'
-import { loginUser } from '../../store/slices/authSlice'
+import { useAppDispatch, useAppSelector } from '@/app/store/index'
+import { loginUser } from '@/pages/LoginPage/api/authSlice'
 import { MdClear } from 'react-icons/md'
-import './LoginForm.css'
 
-type FormValues = {
+interface FormValues {
   username: string
   password: string
   remember: boolean
@@ -44,7 +43,7 @@ const LoginForm: FC = () => {
   }
 
   return (
-    <Form className="login-form" form={form} name="login-form" onFinish={onSubmit}>
+    <Form style={{ minWidth: 400 }} form={form} name="login-form" onFinish={onSubmit}>
       {contextHolder}
       <Form.Item
         name="username"

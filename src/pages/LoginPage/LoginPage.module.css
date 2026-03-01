@@ -1,4 +1,4 @@
-.login-page {
+.page {
   background: var(--background-primary-color);
   display: flex;
   justify-content: center;
@@ -6,27 +6,27 @@
   min-height: 100vh;
 }
 
-.login-page__container-border {
+.containerBorder {
   background-color: var(--white-color);
   border-radius: var(--border-radius);
   border: 1px solid var(--border-primary-color);
 }
 
-.login-page__container-border-inside1 {
+.containerBorderInside1 {
   padding: 3px;
   border-radius: 39px;
   background-color: var(--white-color);
 }
-.login-page__container-border-inside2 {
+
+.containerBorderInside2 {
   border-radius: 38px;
   background: linear-gradient(180deg, var(--border-primary-color), var(--white-color));
   padding: 1px;
 }
 
-.login-page__container {
+.container {
   padding: 48px;
   padding-bottom: 30px;
-  /* border: px solid white; */
   border-radius: 36px;
   display: flex;
   flex-direction: column;
@@ -34,7 +34,7 @@
   background: linear-gradient(180deg, var(--background-primary-color), var(--white-color));
 }
 
-.login-page__logo {
+.logo {
   width: 38px;
   height: 38px;
   border-radius: 50%;
@@ -42,14 +42,13 @@
   background: linear-gradient(180deg, var(--background-primary-color), var(--white-color));
 }
 
-.login-page__logo-border-inside1 {
+.logoBorderInside1 {
   padding: 1px;
   border-radius: 50px;
-  background-color: red;
   background: linear-gradient(180deg, var(--border-primary-color), var(--white-color));
 }
 
-.login-page__logo-border {
+.logoBorder {
   padding: 3px;
   align-self: center;
   border-radius: 100px;

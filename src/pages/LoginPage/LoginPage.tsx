@@ -1,18 +1,18 @@
-import { type FC } from 'react'
-import logo from '../../assets/logo.svg'
-import LoginForm from '../../components/LoginForm/LoginForm.tsx'
-import './LoginPage.css'
+import { type FC } from 'react';
+import logo from '@/assets/logo.svg';
+import LoginForm from '@/pages/LoginPage/ui/LoginForm/LoginForm';
+import styles from './LoginPage.module.css';
 
 const LoginPage: FC = () => {
   return (
-    <div className="login-page">
-      <div className="login-page__container-border">
-        <div className="login-page__container-border-inside1">
-          <div className="login-page__container-border-inside2">
-            <div className="login-page__container">
-              <div className="login-page__logo-border">
-                <div className="login-page__logo-border-inside1">
-                  <div className="login-page__logo">
+    <div className={styles.page}>
+      <div className={styles.containerBorder}>
+        <div className={styles.containerBorderInside1}>
+          <div className={styles.containerBorderInside2}>
+            <div className={styles.container}>
+              <div className={styles.logoBorder}>
+                <div className={styles.logoBorderInside1}>
+                  <div className={styles.logo}>
                     <img src={logo} alt="logo" />
                   </div>
                 </div>
@@ -27,7 +27,7 @@ const LoginPage: FC = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default LoginPage
+export default LoginPage;

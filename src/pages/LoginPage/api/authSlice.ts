@@ -1,5 +1,5 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
-import { type AuthState, type LoginCredentials, type AuthResponse } from '../../api/authApi/auth.types'
+import type { AuthState, LoginCredentials, AuthResponse } from '@/pages/LoginPage/api/auth.types'
 
 const loadState = (): Partial<AuthState> => {
   try {
