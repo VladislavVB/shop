@@ -1,5 +1,6 @@
 import React from 'react'
-import { Spin, Progress } from 'antd'
+import { Spin } from 'antd'
+import { LoadingOutlined } from '@ant-design/icons'
 
 interface LoadingIndicatorProps {
   isLoading: boolean
@@ -16,7 +17,7 @@ export const LoadingIndicator: React.FC<LoadingIndicatorProps> = ({
 }) => {
   if (!isLoading) return null
 
-  const indicator = <Progress type="circle" percent={100} format={() => ''} size={size} strokeColor="#1890ff" />
+  const indicator = <LoadingOutlined style={{ fontSize: size }} spin />
 
   if (fullScreen) {
     return (

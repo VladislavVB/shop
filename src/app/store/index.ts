@@ -1,18 +1,15 @@
 import { type TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux'
 import { configureStore } from '@reduxjs/toolkit'
 import { setupListeners } from '@reduxjs/toolkit/query'
-import { authApi } from '@/pages/LoginPage/api/authApi'
-import { productsApi } from '@/pages/ProductsPage/api/productsApi'
-import authReducer from '../../pages/LoginPage/api/authSlice'
+import { authReducer } from '@/pages/LoginPage/api/authApi'
+import { baseApi } from '../baseApi/baseApi'
 
 export const store = configureStore({
   reducer: {
     auth: authReducer,
-    [authApi.reducerPath]: authApi.reducer,
-    [productsApi.reducerPath]: productsApi.reducer,
+    [baseApi.reducerPath]: baseApi.reducer,
   },
-  middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware().concat(authApi.middleware).concat(productsApi.middleware),
+  middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(baseApi.middleware),
 })
 
 setupListeners(store.dispatch)

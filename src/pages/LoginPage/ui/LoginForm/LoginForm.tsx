@@ -2,8 +2,7 @@ import { useEffect, type FC } from 'react'
 import { HiOutlineUser, HiOutlineLockClosed, HiOutlineEye, HiOutlineEyeOff } from 'react-icons/hi'
 import { Button, Checkbox, Form, Input, Divider, notification } from 'antd'
 import { useNavigate } from 'react-router-dom'
-import { useAppDispatch, useAppSelector } from '@/app/store/index'
-import { loginUser } from '@/pages/LoginPage/api/authSlice'
+import { useLoginMutation } from '@/pages/LoginPage/api/authApi'
 import { MdClear } from 'react-icons/md'
 
 interface FormValues {
@@ -13,31 +12,29 @@ interface FormValues {
 }
 
 const LoginForm: FC = () => {
-  const dispatch = useAppDispatch()
   const navigate = useNavigate()
   const [form] = Form.useForm()
-  const { isLoading, token } = useAppSelector((state) => state.auth)
+  const [login, { isLoading, data }] = useLoginMutation()
   const [api, contextHolder] = notification.useNotification()
 
   useEffect(() => {
-    if (token) {
+    if (data?.accessToken) {
       navigate('/products', { replace: true })
     }
-  }, [token, navigate])
+  }, [data, navigate])
 
   const onSubmit = async (values: FormValues) => {
     const { username, password, remember } = values
     try {
-      await dispatch(
-        loginUser({
-          credentials: { username, password },
-          rememberMe: remember,
-        })
-      ).unwrap()
-    } catch (err) {
+      await login({ 
+        username, 
+        password, 
+        rememberMe: remember 
+      }).unwrap()
+    } catch (err: any) {
       api.error({
         message: 'Ошибка авторизации',
-        description: err as string,
+        description: err.data?.message || err.message || 'Неверный логин или пароль',
       })
     }
   }
