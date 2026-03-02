@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import { Form, Input, Button, Card, message } from 'antd'
 import { useNavigate } from 'react-router-dom'
-import type { Product } from '@/api/productsApi/products.types'
+import { ROUTES } from '@/app/router'
+import type { Product } from '../ProductsPage/api/products.types'
 
 interface AddProductFormData {
   title: string
@@ -41,7 +42,7 @@ const AddProductPage: React.FC = () => {
   }
 
   const handleCancel = () => {
-    navigate('/')
+    navigate(ROUTES.PRODUCTS)
   }
 
   return (

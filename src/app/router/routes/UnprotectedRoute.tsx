@@ -1,16 +1,12 @@
 import { Navigate } from 'react-router-dom'
-import { useAppSelector } from '@/app/store/index'
+import { authStorage } from '@/pages/LoginPage/api/authApi'
+import type { UnprotectedRouteProps } from '@/app/router/router.types'
 
-interface UnprotectedRouteProps {
-  children: React.ReactNode
-  needsRedirect?: boolean
-}
+const UnprotectedRoute: React.FC<UnprotectedRouteProps> = ({ children, redirectTo = '/products' }) => {
+  const isAuthenticated = authStorage.isAuthenticated()
 
-const UnprotectedRoute: React.FC<UnprotectedRouteProps> = ({ children, needsRedirect = false }) => {
-  const { token } = useAppSelector((state) => state.auth)
-
-  if (token && needsRedirect) {
-    return <Navigate to="/products" replace />
+  if (isAuthenticated) {
+    return <Navigate to={redirectTo} replace />
   }
 
   return <>{children}</>

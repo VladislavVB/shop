@@ -16,6 +16,7 @@ import { CellPrice } from '@/components/Cells/CellPrice'
 import { BiPlusCircle } from 'react-icons/bi'
 import { TfiReload } from 'react-icons/tfi'
 import styles from './ProductsTable.module.css'
+import { ROUTES } from '@/app/router'
 
 const ProductsTable: React.FC = () => {
   const navigate = useNavigate()
@@ -192,7 +193,7 @@ const ProductsTable: React.FC = () => {
   ]
 
   const handleAddClick = () => {
-    navigate('/add-product')
+    navigate(ROUTES.ADD_PRODUCT)
   }
 
   return (

@@ -4,6 +4,7 @@ import { Button, Checkbox, Form, Input, Divider, notification } from 'antd'
 import { useNavigate } from 'react-router-dom'
 import { useLoginMutation } from '@/pages/LoginPage/api/authApi'
 import { MdClear } from 'react-icons/md'
+import { ROUTES } from '@/app/router'
 
 interface FormValues {
   username: string
@@ -19,18 +20,19 @@ const LoginForm: FC = () => {
 
   useEffect(() => {
     if (data?.accessToken) {
-      navigate('/products', { replace: true })
+      navigate(ROUTES.PRODUCTS, { replace: true })
     }
   }, [data, navigate])
 
   const onSubmit = async (values: FormValues) => {
     const { username, password, remember } = values
     try {
-      await login({ 
-        username, 
-        password, 
-        rememberMe: remember 
+      await login({
+        username,
+        password,
+        rememberMe: remember,
       }).unwrap()
+      navigate(ROUTES.PRODUCTS, { replace: true })
     } catch (err: any) {
       api.error({
         message: 'Ошибка авторизации',
