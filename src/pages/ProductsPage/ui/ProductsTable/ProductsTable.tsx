@@ -203,7 +203,7 @@ const ProductsTable: React.FC = () => {
       <div className={styles.tableWrapper}>
         <div className={styles.tableHeader}>
           <h5 className="h6">Все позиции</h5>
-          <div>
+          <div className={styles.tableButton}>
             <Button
               onClick={handleRefetch}
               className={styles.relaod}
